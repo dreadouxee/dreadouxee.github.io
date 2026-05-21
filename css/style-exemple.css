@@ -4,16 +4,19 @@
       padding: 0;
     }
  
-    body {
-      background-image: url(https://cdn.pixabay.com/photo/2012/04/18/14/41/opened-37229_1280.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      min-height: 100vh;
-      font-family: Georgia, serif;
-      font-size: 15px;
-      line-height: 1.6;
-      background-position: center;
-    }
+   body {
+  background-image: url(https://cdn.pixabay.com/photo/2012/04/18/14/41/opened-37229_1280.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background-position: center top; /* alignement en haut */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
  
     /* Wrapper that aligns with the book's inner pages */
     .book-content {
@@ -55,11 +58,11 @@
  
     /* TOC / page link — top right of right page */
     .toc {
-      position: absolute;
-      top: 8px;
-      right: 85px;
-      font-size: 13px;
-    }
+  position: absolute;
+  top: 68px; /* ajusté en conséquence */
+  right: 85px;
+  font-size: 13px;
+}
  
     .toc a {
       color: #6a0dad;
@@ -68,7 +71,9 @@
  
     /* Wrap body content for positioning context */
     .book-wrapper {
-      position: relative;
-      max-width: 1050px;
-      margin: 0 auto;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 60px; /* ← pousse le contenu vers le bas pour entrer dans le livre */
+}
