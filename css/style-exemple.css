@@ -20,13 +20,13 @@
  
     /* Wrapper that aligns with the book's inner pages */
     .book-content {
-      display: flex;
-      gap: 0;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 1050px;
-      padding-top: 18px;
-    }
+  display: flex;
+  gap: 40px; /* ← espace entre les deux pages */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1050px;
+  padding-top: 18px;
+}
  
     .column {
       width: 50%;
