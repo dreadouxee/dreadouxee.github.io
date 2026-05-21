@@ -21,7 +21,7 @@
     /* Wrapper that aligns with the book's inner pages */
     .book-content {
       display: flex;
-      gap: 0;
+      gap: 40;
       margin: 0 auto;
       width: 100%;
       max-width: 1050px;
