@@ -1,4 +1,4 @@
-/* Réinitialisation de base */
+/* --- CONFIGURATION GLOBALE ET REGLAGE PAR DEFAUT --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +18,6 @@ body {
   padding: 20px;
 }
 
-/* Conteneur principal aligné avec l'illustration du livre */
 .book-wrapper {
   position: relative;
   width: 100%;
@@ -27,24 +26,21 @@ body {
   padding-top: 55px; 
 }
 
-/* Grille double-page */
 .book-content {
   display: flex;
   width: 100%;
 }
 
-/* Style de base des deux pages */
 .column {
   width: 50%;
-  min-height: 580px; /* Donne une hauteur minimale pour équilibrer le livre */
+  min-height: 580px;
 }
 
-/* Marges de la Page Gauche (laissée vide) */
 .column.left-page {
   padding: 20px 45px 20px 85px;
 }
 
-/* Marges de la Page Droite (contient les écritures) */
+/* Alignement vertical global de la page de droite */
 .column.right-page {
   padding: 40px 85px 40px 45px;
   display: flex;
@@ -52,46 +48,65 @@ body {
   align-items: center;
 }
 
-/* Structure de l'interface de garde (alignement vertical centré) */
 .scifi-interface {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Espace équitablement le Haut, le Milieu et le Bas */
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
-/* --- ÉLÉMENTS TEXTUELS CENTRÉS ET COULEURS AJUSTÉES POUR LE FOND CLAIR --- */
+/* --- CENTRAGE ET REDIMENSIONNEMENT DE L'IMAGE --- */
+
+.book-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le texte ET le bloc image horizontalement */
+  margin: 20px 0;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement dans son conteneur */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.fit-picture {
+  max-width: 200px; /* Aligne la taille pour que ça reste élégant (ajustable à ta guise) */
+  height: auto;     /* Garde les proportions de l'image sans la déformer */
+  display: block;
+  border-radius: 8px; /* Optionnel : adoucit un peu les angles de l'image */
+}
+
+/* --- STYLES DES TEXTES --- */
 
 .main-header {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .glitch-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: #111111; /* Sombre pour être lisible sur le papier beige */
+  color: #111111;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.3;
 }
 
 .robot-name {
-  color: #6a0dad; /* Violet signature */
-}
-
-.book-info {
-  margin: 30px 0;
+  color: #6a0dad;
 }
 
 .author {
   font-family: Georgia, serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #333333;
-  margin-bottom: 15px;
 }
 
 .author strong {
@@ -99,23 +114,6 @@ body {
   color: #111111;
 }
 
-/* Alerte Radiation style Sci-Fi */
-.radiation-warning {
-  border: 1px dashed #ff3333;
-  padding: 6px 15px;
-  background-color: rgba(255, 51, 51, 0.05);
-  display: inline-block;
-}
-
-.radiation-warning span {
-  font-family: 'Share Tech Mono', monospace;
-  color: #d32f2f;
-  font-weight: bold;
-  font-size: 11px;
-  letter-spacing: 3px;
-}
-
-/* Bouton d'entrée en bas de page */
 .cover-footer {
   margin-bottom: 20px;
 }
@@ -131,10 +129,4 @@ body {
   text-decoration: none;
   letter-spacing: 1px;
   border-radius: 4px;
-  transition: background-color 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.btn-enter:hover {
-  background-color: #520987;
 }
