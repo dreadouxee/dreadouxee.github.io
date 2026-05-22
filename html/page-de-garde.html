@@ -6,31 +6,39 @@
   <meta name="description" content="Les Aventures de Wall-A - Une histoire post-apocalyptique">
   <meta name="theme-color" content="#1a1a1a">
   <title>Les Aventures de Wall-A</title>
-  <link rel="stylesheet" href="Page-de-Gardec.css">
+  <link rel="stylesheet" href="page-de-garde.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="cover-container">
+  <div class="book-wrapper">
     <div class="overlay"></div>
     
-    <div class="scifi-interface">
-      <header class="main-header">
-        <p class="system-status">[ SYSTEM_STATUS: ONLINE ]</p>
-        <h1 class="glitch-title">Les Aventures de <span class="robot-name">Wall-A</span></h1>
-        <p class="subtitle">Un survivant robot dans l'apres guerre</p>
-      </header>
+    <div class="book-content">
+      <!-- Page de gauche : Vide pour l'instant (style page de garde) -->
+      <div class="column left-page"></div>
+      
+      <!-- Page de droite : Contient la page de garde centrée -->
+      <div class="column right-page">
+        <main class="scifi-interface">
+          
+          <header class="main-header">
+            <h1 class="glitch-title">Les Aventures de <span class="robot-name">Wall-A</span></h1>
+          </header>
 
-      <section class="book-info">
-        <p class="author">Ecris par Lucas Pierre Adam</p>
-        <div class="radiation-warning">
-          <span> ALERTE RADIATION </span>
-        </div>
-      </section>
+          <section class="book-info">
+            <p class="author">Écrit par <strong>Lucas Pierre Adam</strong></p>
+            <div class="radiation-warning">
+              <span>Attention au méchant</span>
+            </div>
+          </section>
 
-      <footer class="cover-footer">
-        <a href="html/page-exemple.html" class="btn-enter">INITIALISER LA LECTURE</a>
-      </footer>
+          <footer class="cover-footer">
+            <a href="html/page-exemple.html" class="btn-enter">INITIALISER LA LECTURE</a>
+          </footer>
+          
+        </main>
+      </div>
     </div>
-  </main>
+  </div>
 </body>
 </html>
