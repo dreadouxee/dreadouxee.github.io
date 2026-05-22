@@ -6,6 +6,7 @@
   <meta name="description" content="Les Aventures de Wall-A - Une histoire post-apocalyptique">
   <meta name="theme-color" content="#1a1a1a">
   <title>Les Aventures de Wall-A</title>
+  <!-- Correction de rael="stylesheet" en rel="stylesheet" -->
   <link rel="stylesheet" href="page-de-garde.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +15,7 @@
     <div class="overlay"></div>
     
     <div class="book-content">
-      <!-- Page de gauche : Vide pour l'instant (style page de garde) -->
+      <!-- Page de gauche : Vide -->
       <div class="column left-page"></div>
       
       <!-- Page de droite : Contient la page de garde centrée -->
@@ -27,9 +28,12 @@
 
           <section class="book-info">
             <p class="author">Écrit par <strong>Lucas Pierre Adam</strong></p>
-            <div class="radiation-warning">
-              <span>Attention au méchant</span>
+            
+            <!-- Conteneur de l'image pour gérer son centrage -->
+            <div class="image-container">
+              <img class="fit-picture" src="c:\Users\p.sanchez\Downloads\Pagedegarde.png" alt="Illustration Wall-A" />
             </div>
+            
           </section>
 
           <footer class="cover-footer">
