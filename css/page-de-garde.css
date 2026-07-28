@@ -1,132 +1,163 @@
-/* --- CONFIGURATION GLOBALE ET REGLAGE PAR DEFAUT --- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background-image: url(https://cdn.pixabay.com/photo/2012/04/18/14/41/opened-37229_1280.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
-  background-color: #1a1a1a;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
+body{
+    font-family:Courier New, monospace;
+    background:#111;
 }
 
-.book-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding-top: 55px; 
+.fond{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.book-content {
-  display: flex;
-  width: 100%;
+/* Ancien ordinateur */
+
+.ordinateur{
+    width:720px;
 }
 
-.column {
-  width: 50%;
-  min-height: 580px;
+.ecran{
+    position:relative;
+    overflow:hidden;
+
+    background:#23412a;
+    border:22px solid #9a927e;
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:
+        0 0 40px #000,
+        inset 0 0 40px rgba(0,255,0,.15);
 }
 
-.column.left-page {
-  padding: 20px 45px 20px 85px;
+/* Effet vieux moniteur */
+
+.ecran::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:repeating-linear-gradient(
+        transparent 0px,
+        rgba(255,255,255,.03) 2px,
+        transparent 4px
+    );
+
+    pointer-events:none;
 }
 
-/* Alignement vertical global de la page de droite */
-.column.right-page {
-  padding: 40px 85px 40px 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.ecran h2{
+    text-align:center;
+    color:#6cff6c;
+    letter-spacing:3px;
+    margin-bottom:15px;
 }
 
-.scifi-interface {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+.ecran h1{
+    text-align:center;
+    color:#90ff90;
+    font-size:50px;
+    text-shadow:0 0 12px #00ff66;
+    margin-bottom:15px;
 }
 
-/* --- CENTRAGE ET REDIMENSIONNEMENT DE L'IMAGE --- */
-
-.book-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre le texte ET le bloc image horizontalement */
-  margin: 20px 0;
+.ecran h3{
+    text-align:center;
+    color:#b8ffb8;
+    margin-bottom:25px;
 }
 
-.image-container {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Centre l'image horizontalement dans son conteneur */
-  align-items: center;
-  margin-top: 20px;
+.ecran p{
+    color:#b8ffb8;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:20px;
 }
 
-.fit-picture {
-  max-width: 200px; /* Aligne la taille pour que ça reste élégant (ajustable à ta guise) */
-  height: auto;     /* Garde les proportions de l'image sans la déformer */
-  display: block;
-  border-radius: 8px; /* Optionnel : adoucit un peu les angles de l'image */
+.ligne{
+    border-top:2px solid #56ff56;
+    margin:25px 0;
 }
 
-/* --- STYLES DES TEXTES --- */
+/* Bouton */
 
-.main-header {
-  margin-top: 15px;
+.bouton-aventure{
+
+    display:block;
+    margin:35px auto 10px;
+
+    padding:15px 40px;
+
+    background:#143514;
+    color:#7CFF7C;
+
+    border:2px solid #7CFF7C;
+    border-radius:8px;
+
+    font-family:Courier New, monospace;
+    font-size:22px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 0 15px rgba(0,255,0,.5);
+
+    animation:clignote 1.2s infinite;
 }
 
-.glitch-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #111111;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.3;
+.bouton-aventure:hover{
+
+    background:#7CFF7C;
+    color:#173117;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px #7CFF7C;
 }
 
-.robot-name {
-  color: #6a0dad;
+.bouton-aventure:active{
+
+    transform:scale(0.97);
 }
 
-.author {
-  font-family: Georgia, serif;
-  font-size: 15px;
-  color: #333333;
+@keyframes clignote{
+
+    50%{
+        opacity:.6;
+    }
+
 }
 
-.author strong {
-  font-family: 'Orbitron', sans-serif;
-  color: #111111;
-}
+/* Socle de l'ordinateur */
 
-.cover-footer {
-  margin-bottom: 20px;
-}
+.socle{
+    width:220px;
+    height:45px;
 
-.btn-enter {
-  display: inline-block;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #6a0dad;
-  padding: 10px 20px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  border-radius: 4px;
+    background:#9a927e;
+
+    margin:auto;
+
+    border-radius:0 0 20px 20px;
 }
