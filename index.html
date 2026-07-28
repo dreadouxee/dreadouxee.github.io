@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Les Aventures de Wall-A - Une histoire post-apocalyptique">
-  <meta name="theme-color" content="#1a1a1a">
-  <title>Les Aventures de Wall-A</title>
-  <!-- Correction de rael="stylesheet" en rel="stylesheet" -->
-  <link rel="stylesheet" href="../css/page-de-garde.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Aventures de Wall-A</title>
+    <link rel="stylesheet" href="../css/testpgcss.css">
 </head>
 <body>
-  <div class="book-wrapper">
-    <div class="overlay"></div>
-    
-    <div class="book-content">
-      <!-- Page de gauche : Vide -->
-      <div class="column left-page"></div>
-      
-      <!-- Page de droite : Contient la page de garde centrée -->
-      <div class="column right-page">
-        <main class="scifi-interface">
-          
-          <header class="main-header">
-            <h1 class="glitch-title">Les Aventures de <span class="robot-name">Wall-A</span></h1>
-          </header>
 
-          <section class="book-info">
-            <p class="author">Écrit par <strong>Lucas Pierre Adam</strong></p>
-            
-            <!-- Conteneur de l'image pour gérer son centrage -->
-            <div class="image-container">
-              <img class="fit-picture" src="../image/Pagedegarde.png" alt="Illustration Wall-A" />
-            </div>
-            
-          </section>
+<div class="fond">
 
-          <footer class="cover-footer">
-            <a href="html/page_1.html" class="btn-enter">INITIALISER LA LECTURE</a>
-          </footer>
-          
-        </main>
-      </div>
+    <div class="ordinateur">
+
+        <div class="ecran">
+
+            <h2>LIVRE DONT VOUS ÊTES LE HÉROS</h2>
+
+            <h1>Les Aventures de Wall-A</h1>
+
+            <h3>Journal de survie - Année 2159</h3>
+
+            <p>
+                La guerre nucléaire a détruit la civilisation.
+                Les villes sont devenues des ruines où seuls quelques
+                survivants errent encore.
+            </p>
+
+            <p>
+                Vous incarnez <strong>WALL-A</strong>, un robot créé par un vieil
+                homme avec son fils nommé <strong>Gimmi</strong>, qui le contrôle.
+            </p>
+
+            <p>
+                Ensemble, vous devrez explorer les vestiges du monde,
+                prendre des décisions difficiles et découvrir ce qu'il
+                reste de l'humanité.
+            </p>
+
+            <div class="ligne"></div>
+
+            <button class="bouton-aventure" onclick="location.href='chapitre1.html'">
+                ► COMMENCER L'AVENTURE
+            </button>
+
+        </div>
+
+        <div class="socle"></div>
+
     </div>
-  </div>
+
+</div>
+
 </body>
 </html>
