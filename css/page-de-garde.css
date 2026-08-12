@@ -15,7 +15,7 @@ body{
 
     background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
-    url("image/dessin de con.png");
+    url("assets/dessin de con.png");
 
     background-size:cover;
     background-position:center;
